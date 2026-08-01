@@ -2,9 +2,7 @@
 // BLE- GATT (hierarchy...)
 // https://youtu.be/P0aqbD9umDE, https://youtu.be/wkO-ytWVvC0
 // https://github.com/espressif/arduino-esp32/tree/master/libraries/BLE
-
 // MIT App Inventor- https://youtu.be/qS4WtLu5wzE
-
 // Servomotor- https://www.youtube.com/shorts/G6hntRnA8fM
 
 // ESP32-CAM CH340 HW-818, AI Thinker ESP32-CAM, ESP32-S
@@ -17,16 +15,17 @@
 
 // PSRAM, DRAM, IRAM?
 
+// <>- built-in (Arduino Framework, Espressif32 Platform), ""- 3rd-party
 #include <Arduino.h>
 #include <WiFi.h>
 // #include <LittleFS.h>  // 
-#include "BluetoothSerial.h"
+#include <BluetoothSerial.h>
 // #include <BLEDevice.h>
 // #include <BLEUtils.h>
 // #include <BLEServer.h>
 // #include <BLECharacteristic.h>
 // #include <BLE2902.h>
-#include <ESP32Servo.h>
+#include "ESP32Servo.h"
 // #include "CameraController.h"
 
 #include "esp_camera.h"
@@ -52,9 +51,9 @@ bool isFlash = false;
 // const int pwmFreq = 15000;
 // const int pwmResolution = 8;  // Bits, 0–255
 
-// WiFi
-const char* SSID = "PLDTHOMEFIBRe3e58";
-const char* PASSWORD = "Florenda@1124";
+// WiFi- enter credentials
+const char* SSID = "";
+const char* PASSWORD = "";
 // WiFiServer Server(80);  // Port 80?
 
 // Bluetooth
