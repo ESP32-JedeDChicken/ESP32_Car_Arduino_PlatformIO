@@ -1,10 +1,10 @@
 # ESP32_Arduino_PlatformIO Remote-Controlled Car
 
-This project utilized the ESP32Servo by Kevin Harrington and esp32-camera by Espressif Systems libraries. The esp32-camera library was too large for the ESP32 used thus only the utilized APIs in the library were included in the source code. The project also used WiFi and BluetoothSerial (Bluetooth Classic) modules that are built-in Espressif32 Platform with Arduino Framework.
+This project utilized the ESP32Servo by Kevin Harrington and esp32-camera by Espressif Systems libraries. The esp32-camera library was too large for the ESP32 used thus only the utilized APIs in the library were included in the source code. The project also used WiFi and BluetoothSerial (Bluetooth Classic) modules that are built-in Espressif32 Platform w/ Arduino Framework.
 
-This RC Car and its camera part can be controlled through an android phone via Bluetooth Classic. The RC Car features a camera, and users can take photos (viewed in app, via WiFi) as well as toggle the camera flash through the android app. Attached to the camera part is a servomotor to tilt it 180° horizontally. The RC Car is powered by 4 AA batteries.
+This RC Car and its camera part can be controlled through an Android phone via Bluetooth Classic. The RC Car features a camera, and users can take photos (viewed in app, via WiFi) as well as toggle the camera flash through the Android app. Attached to the camera part is a servomotor to tilt it 180° horizontally. The RC Car is powered by 4 AA batteries.
 
-The simple android app was developed in the MIT App Inventor. The components and code blocks used are in photos/.
+The simple Android app was developed in the MIT App Inventor. The components and code blocks used are in photos/.
 
 Further implementation will allow for 2-way audio communication also via BT Classic, as well as will miniaturized the RC Car further using 1:32 to 1:64 car models instead.
 
