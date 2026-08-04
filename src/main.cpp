@@ -1,5 +1,5 @@
 // Sources- 
-// BLE- GATT (hierarchy...)
+// BLE (e.g. GATT [hierarchy...]) vs BT Classic (e.g. SPP)
 // https://youtu.be/P0aqbD9umDE, https://youtu.be/wkO-ytWVvC0
 // https://github.com/espressif/arduino-esp32/tree/master/libraries/BLE
 // MIT App Inventor- https://youtu.be/qS4WtLu5wzE
@@ -19,7 +19,7 @@
 #include <Arduino.h>
 #include <WiFi.h>
 // #include <LittleFS.h>  // 
-#include <BluetoothSerial.h>
+#include <BluetoothSerial.h>  // BT Classic (Serial Port Profile / SPP, like UART)
 // #include <BLEDevice.h>
 // #include <BLEUtils.h>
 // #include <BLEServer.h>
@@ -52,7 +52,7 @@ bool isFlash = false;
 // const int pwmResolution = 8;  // Bits, 0–255
 
 // WiFi- enter credentials
-const char* SSID = "";
+const char* SSID = "";  // Init pointer
 const char* PASSWORD = "";
 // WiFiServer Server(80);  // Port 80?
 
@@ -72,7 +72,7 @@ const int ROTATE_SPEED = 20;  // ms per step
 
 // Camera
 // CameraController cam;
-WebServer Server(80);
+WebServer Server(80);  // Initializes web server obj... listen to incoming HTTP web reqs on port80
 // void startCameraServer();
 // void setupLedFlash(int pin);
 // void handleJPGStream();
@@ -157,6 +157,8 @@ bool setupCamera() {
   return true;
 }
 
+// HTML for online camera...- typical structure in C++ notes...
+// Stored in progmem/flash instead of ram
 const char index_html[] PROGMEM = R"rawliteral(
 <!DOCTYPE html>
 <html>
@@ -171,6 +173,7 @@ const char index_html[] PROGMEM = R"rawliteral(
 </body>
 </html>
 )rawliteral";
+// rawliteral- delimiter name, 
 
 void handleStream() {
   WiFiClient Client = Server.client();
