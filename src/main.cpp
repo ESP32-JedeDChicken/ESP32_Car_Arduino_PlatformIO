@@ -5,7 +5,7 @@
 // MIT App Inventor- https://youtu.be/qS4WtLu5wzE
 // Servomotor- https://www.youtube.com/shorts/G6hntRnA8fM
 
-// ESP32-CAM CH340 HW-818, AI Thinker ESP32-CAM, ESP32-S
+// ESP32-CAM CH340 HW-818 (uses ESP32-S chip/MCU), AI Thinker ESP32-CAM
 // OV2640 Camera Sensor
 // Hold Flash... > Upload > Connecting... (Click RST) > Writing @ 0x00... (Release Flash)
 // Click RST to start program...
